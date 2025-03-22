@@ -52,7 +52,21 @@ nav {
  nav a:hover{
     background-color: #555;
  }
+
 /*flex styles*/
+
+@media screen and (max-width: 768px) {
+
+   nav ul {
+      display: flex;
+      flex-direction: column;
+   }
+  
+   nav.active ul {
+      display: flex; /* Show nav items when nav is active */
+   }
+
+}
 
 @media screen and (min-width: 768px) {
 
@@ -64,6 +78,5 @@ nav {
     nav li{
         flex: 1 1 0;
     }
-
-
+    
 }
