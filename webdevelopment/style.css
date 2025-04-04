@@ -64,6 +64,14 @@ button:hover {
     background-color: #2ecc71;
 }
 
+.video {
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+    height: 315px;
+    width: 560px;
+}
+
 /* Header Styles */
 header {
     background-color: #34495e;
@@ -80,6 +88,16 @@ footer {
     padding: 10px;
     bottom: 0;
     width: 100%;
+}
+
+.pic {
+    width: 25px;
+    -webkit-transition:width 0.3s linear 0s;
+    transition:width 0.3s linear 0s;
+}
+
+.pic:hover {
+    width: 50px;
 }
 
 /* Responsive Styles */
