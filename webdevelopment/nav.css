@@ -53,6 +53,29 @@ nav {
     background-color: #555;
  }
 
+ /* home icon behavior */
+
+ .homeicon {
+
+   display: inline-block;
+   padding-right: 10px;
+
+ }
+
+ .home {
+
+   text-align: center;
+
+ }
+
+ .home:hover .homeicon {
+   
+   width: 20px;
+   -webkit-transition:width 0.3s linear 0s;
+   transition:width 0.3s linear 0s;
+   
+ }
+
 /*flex styles*/
 
 @media screen and (max-width: 768px) {
@@ -65,8 +88,8 @@ nav {
    nav.active ul {
       display: flex; /* Show nav items when nav is active */
    }
-
-}
+  
+   }
 
 @media screen and (min-width: 768px) {
 
