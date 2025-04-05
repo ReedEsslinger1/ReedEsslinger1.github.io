@@ -1,7 +1,17 @@
 
+@font-face {
+    font-family: 'Raleway', sans-serif;
+    src: url(Raleway/Raleway-VariableFont_wght.ttf);
+}
+
 /* Base Styles */
+
+blockquote {
+    font-family: 'Raleway', sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Raleway', sans-serif;
     color: #333;
     background-color: #f4f4f4;
     margin: 0;
@@ -115,5 +125,33 @@ footer {
     }
     h1 {
         font-size: 24px;
+    }
+}
+
+/* Print Stylesheet */
+
+@media print {
+    * {
+        background: transparent !important;
+        color:  #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    nav, footer, .image-container, .video, .box, blockquote, .resume {
+        display: none; 
+    }
+
+    header {
+        margin-bottom: 0;
+        border: none;
+        text-align: center;
+    }
+    a[href]::after {
+        content: " [" attr(href)"]";
+        color: blue;
+    }
+    @page {
+        margin: 1in
     }
 }
