@@ -118,23 +118,6 @@ footer {
     width: 50px;
 }
 
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
-    h1 {
-        font-size: 24px;
-    }
-
-    .flexcontainer {
-
-        display: flex;
-        gap: 10px;
-        flex-direction: column;
-    }
-}
-
 /* Contact */
 
 .contact-container {
@@ -195,6 +178,101 @@ footer {
   }
 
 /* Print Stylesheet */
+
+figure {
+    max-width: 600px;
+    margin: 1em auto;
+    border: 2px solid #333;
+    border-radius: 8px;
+    overflow-x: auto;
+    background: #fff;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  caption {
+    caption-side: top;
+    font-weight: bold;
+    background: #333;
+    color: #fff;
+    padding: 0.5em;
+    text-align: left;
+    font-size: 1.1em;
+  }
+  
+  thead tr,
+  tfoot tr {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  th, td {
+    border: 1px solid #bbb;
+    padding: 0.75em 0.5em;
+    text-align: left;
+  }
+  
+  tbody tr:nth-child(even) {
+    background: #f6f8fa;
+  }
+  
+  tbody tr:nth-child(odd) {
+    background: #e9f2fb;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 600px) {
+    table, thead, tbody, tfoot, tr, th, td {
+      display: block;
+      width: 100%;
+    }
+    thead tr {
+      display: none;
+    }
+    td {
+      position: relative;
+      padding-left: 50%;
+      border: 1px solid #bbb;
+    }
+    td::before {
+      content: attr(data-label) ": ";
+      position: absolute;
+      left: 0.75em;
+      top: 0.75em;
+      font-weight: bold;
+      color: #333;
+      white-space: nowrap;
+    }
+    tfoot tr {
+      background: #333;
+      color: #fff;
+    }
+  }
+  
+  /* Focus and hover for accessibility */
+  tbody tr:focus-within {
+    outline: 2px solid #333;
+  }
+
+  /* Responsive Styles */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+
+    .flexcontainer {
+
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+    }
+}
 
 @media print {
     * {
