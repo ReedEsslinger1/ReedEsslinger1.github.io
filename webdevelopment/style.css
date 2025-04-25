@@ -126,7 +126,73 @@ footer {
     h1 {
         font-size: 24px;
     }
+
+    .flexcontainer {
+
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+    }
 }
+
+/* Contact */
+
+.contact-container {
+    background: #333;
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+  }
+  
+  .contact-container h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #fff;
+  }
+  
+  .contact-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #fff;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccd6dd;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #f9fafb;
+    transition: border-color 0.2s;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #0078d7;
+    outline: none;
+  }
+  
+  .contact-form button {
+    width: 100%;
+    padding: 12px;
+    background: #0078d7;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .contact-form button:hover {
+    background: #005fa3;
+  }
 
 /* Print Stylesheet */
 
