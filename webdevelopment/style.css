@@ -299,3 +299,39 @@ figure {
         margin: 1in
     }
 }
+
+/*grids on projects*/
+
+.gridstuff {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 24px 32px;
+  max-width: 900px;
+  margin: 0 auto;
+  background: #333;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 32px;
+}
+
+.gridstuff > div {
+  padding: 12px 0;
+  font-size: 1.08rem;
+}
+
+.gridstuff > div:nth-child(odd) a {
+  font-weight: 600;
+  color: #FFF;
+  text-decoration: none;
+  transition: color 0.2s;
+  margin-right: 16px;
+}
+
+.gridstuff > div:nth-child(odd) a:hover {
+  color: #3498db;
+  text-decoration: underline;
+}
+
+.gridstuff > div:nth-child(even) {
+  color: #FFF;
+}
