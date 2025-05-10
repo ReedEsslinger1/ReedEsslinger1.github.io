@@ -57,7 +57,7 @@ Tested: Feb 20
     </header>
     <main>
 
-        <h3>A Network Engineer and Educator</h3>
+        <h3>I am A Network Engineer and Educator</h3>
     <p>This page is a demonstration of my capabilities in the field of education and network
 engineering. The following site provides an outline of materials I have created as part of my education in instructional
 design, the networking world, and my private accomplishments. <br> You may navigate to projects at the top of the screen and see some of the learning games I've created, as well as course materials I've created for cybersecurity education. Some are proofs and others complete works.</p>
@@ -96,6 +96,7 @@ design, the networking world, and my private accomplishments. <br> You may navig
       </tfoot>
     </table>
   </figure>
+  <button id="changeUserBtn" style="margin: 20px auto; display: block;">Change User</button>
     </main>
     <footer>
         <div class="footerbg">
@@ -105,5 +106,29 @@ design, the networking world, and my private accomplishments. <br> You may navig
         <p>All content copyright by Reed Esslinger</p>
         </div>
     </footer>
+    <script>
+      // Select the button and the main heading
+      const myButton = document.getElementById('changeUserBtn');
+      const myHeading = document.querySelector('header h1');
+    
+      function setUserName() {
+        const myName = prompt('Please enter your name:');
+        if (myName && myName.trim() !== '') {
+          localStorage.setItem('name', myName);
+          myHeading.textContent = `Welcome, ${myName}!`;
+        }
+      }
+    
+      // Initialize the greeting on page load
+      if (!localStorage.getItem('name')) {
+        setUserName();
+      } else {
+        const storedName = localStorage.getItem('name');
+        myHeading.textContent = `Welcome, ${storedName}!`;
+      }
+    
+      // Allow the user to change their name
+      myButton.addEventListener('click', setUserName);
+    </script>
 </body>
 </html>
